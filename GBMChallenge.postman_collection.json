@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "1de116d6-9ec3-427d-aec1-7a60782b3e83",
+		"name": "GBMChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GeoLocationAPI",
+			"item": [
+				{
+					"name": "ObtenerTodos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						], 
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"Nombre\": \"1\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:2584/Vehiculos/ObtenerTodos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2584",
+							"path": [
+								"Vehiculos",
+								"ObtenerTodos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AlmacenaVehiculo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idVehiculo\": 0,\r\n  \"aliasVehiculo\": \"Challenger\",\r\n  \"longitud\": -89.36,\r\n  \"latitud\": -88.96\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:2584/Vehiculos/AlmacenaVehiculo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2584",
+							"path": [
+								"Vehiculos",
+								"AlmacenaVehiculo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaPosicion/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:2584/Vehiculos/ConsultaPosicion/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2584",
+							"path": [
+								"Vehiculos",
+								"ConsultaPosicion",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "APIGateWay",
+			"item": [
+				{
+					"name": "ObtenerTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AlmacenaVehiculo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idVehiculo\": 0,\n    \"aliasVehiculo\": \"Challenger 23\",\n    \"longitud\": -89.36,\n    \"latitud\": -88.96\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Vehicle/Vehiculos/AlmacenaVehiculo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Vehicle",
+								"Vehiculos",
+								"AlmacenaVehiculo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaPosicion/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

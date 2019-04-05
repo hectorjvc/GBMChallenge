@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiGateway.API</name>
+    </assembly>
+    <members>
+        <member name="T:ApiGateway.API.Controllers.VehiculoServicesController">
+            <summary>
+            Controller de GateWay Vehiculo
+            </summary>
+        </member>
+        <member name="M:ApiGateway.API.Controllers.VehiculoServicesController.#ctor(RestCommunication.IRestClient)">
+            <summary>
+            Inicializacion del Servicio
+            </summary>
+            <param name="restClient"></param>
+        </member>
+        <member name="M:ApiGateway.API.Controllers.VehiculoServicesController.ObtenerTodos">
+            <summary> 
+            Obtiene todos los vehículos
+            </summary>
+            <returns>Un objeto Vehículo</returns>
+        </member>
+        <member name="M:ApiGateway.API.Controllers.VehiculoServicesController.ConsultaPosicion(System.Int32)">
+            <summary>
+            Consulta la posicion de un vehículo
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiGateway.API.Controllers.VehiculoServicesController.AlmacenaVehiculo(ApiGateway.API.Dtos.VehiculoDto)">
+            <summary>
+            Almacena un nuevo vehículo
+            </summary>
+            <param name="vehiculoDto"></param>
+            <returns>El vehículo nuevo</returns>
+        </member>
+        <member name="T:ApiGateway.API.Dtos.VehiculoDto">
+            <summary>
+            Objeto vehículo DTO
+            </summary>
+        </member>
+        <member name="P:ApiGateway.API.Dtos.VehiculoDto.IdVehiculo">
+            <summary>
+            Identificador del Vehiculo
+            </summary>
+        </member>
+        <member name="P:ApiGateway.API.Dtos.VehiculoDto.AliasVehiculo">
+            <summary>
+            Alias del vehiculo
+            </summary>
+        </member>
+        <member name="P:ApiGateway.API.Dtos.VehiculoDto.Longitud">
+            <summary>
+            Longitude del Vehículo
+            </summary>
+        </member>
+        <member name="P:ApiGateway.API.Dtos.VehiculoDto.Latitud">
+            <summary>
+            Latitud del Vehículo
+            </summary>
+        </member>
+        <member name="M:ApiGateway.API.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor de la clase
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:ApiGateway.API.Startup.Configuration">
+            <summary>
+            Miembro privado para inyección de dependencias
+            </summary>
+        </member>
+        <member name="M:ApiGateway.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:ApiGateway.API.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
